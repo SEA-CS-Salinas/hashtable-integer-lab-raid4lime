@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
+//Name - Casey Martinez
 
 public class Number
 {
@@ -9,8 +9,8 @@ public class Number
 	
 	public Number(int value)
 	{
-
-
+	this.theValue = value;
+	
 	}	
 	
 	public int getValue()
@@ -20,16 +20,16 @@ public class Number
 	
 	public boolean equals(Object obj)
 	{
-		return false;
+		return obj instanceof Number && theValue == ((Number) obj).theValue;
 	} 
 	
 	public int hashCode()
 	{
-		return 0;
+		return theValue % 10;
 	}
 
 	public String toString()
 	{
-		return "";
+		return "" + theValue;
 	}	
 }
